@@ -18,7 +18,7 @@ then
 
 	tar -cvzf $dest/$name.tar.gz $source  
 
-
+echo "***********************backup done**************************************************" 
 
 elif [[ $1 == "n" ]];
 then
