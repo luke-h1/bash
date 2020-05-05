@@ -2,8 +2,6 @@
 
 # tar backup script 
 
-
-
 if [[ $1 == "y" ]];
 then
 	echo "starting backup..." 
