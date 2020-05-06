@@ -8,4 +8,4 @@ yum install -y ansible
 } 
 
 
-install_ansible()
+install_ansible
