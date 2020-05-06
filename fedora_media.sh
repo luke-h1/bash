@@ -20,4 +20,4 @@ sudo dnf update -y
 } 
 
 
-media_fedora() 
+media_fedora
