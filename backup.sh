@@ -2,18 +2,22 @@
 
 # tar backup script 
 
-
-
 if [[ $1 == "y" ]];
 then
 	echo "starting backup..." 
-	echo "" 
+	
 	echo -n "enter name of backup : " 
+	
 	read name 
+	
 	echo -n "enter directory you want to be backed up: " 
+	
 	read source 
+	
 	echo -n "where do you want the backup to be saved ? : " 
+	
 	read dest 
+	
 	echo "backing up now..." 
 
 	tar -cvzf $dest/$name.tar.gz $source  
