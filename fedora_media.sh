@@ -17,7 +17,22 @@ sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-open
 sudo dnf update -y
 
   sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
+
+
+dnf install https://download1.rpmfusion.org/{free/fedora/rpmfusion-free,nonfree/fedora/rpmfusion-nonfree}-release-$(rpm -E %fedora).noarch.rpm
+dnf install ffmpeg-libs compat-ffmpeg28
+
+dnf install gstreamer1-libav gstreamer1-plugins-ugly
+dnf install https://download1.rpmfusion.org/{free/fedora/rpmfusion-free,nonfree/fedora/rpmfusion-nonfree}-release-$(rpm -E %fedora).noarch.rpm
+dnf install gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 ffmpeg-libs
+
+
+
+sudo dnf groupupdate multimedia
+sudo dnf install compat-ffmpeg28
+
+
 } 
 
 
-media_fedora() 
+media_fedora
