@@ -30,6 +30,22 @@ dnf install gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 ffmpe
 
 sudo dnf groupupdate multimedia
 sudo dnf install compat-ffmpeg28
+sudo systemctl restart snapd 
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install chromium-ffmpeg
+
+
+sudo dnf install https://download1.rpmfusion.org/{free/fedora/rpmfusion-free,nonfree/fedora/rpmfusion-nonfree}-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf install chromium-libs-media-freeworld
+
+
+sudo dnf install https://download1.rpmfusion.org/{free/fedora/rpmfusion-free,nonfree/fedora/rpmfusion-nonfree}-release-$(rpm -E %fedora).noarch.rpm
+
+
+sudo dnf install compat-ffmpeg28 ffmpeg-libs
+
+sudo yum update -y && sudo dnf update -y && systemctl daemon-reload 
 
 
 } 
