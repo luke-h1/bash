@@ -12,7 +12,7 @@ read MENUCHOICE
 case $MENUCHOICE in
   1)
 
-    echo "Congratulations for Choosing the First Option";;
+    echo "Choice 1 chosen";;
 
   2)
 
