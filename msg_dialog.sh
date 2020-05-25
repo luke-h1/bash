@@ -25,7 +25,7 @@ if [ "$1" == "shutdown" ]; then
 
 else
 
-  funcDisplayInfoBox "Information..." "You are not doing anything fun..." "11" "21" "5"
+  funcDisplayInfoBox "Information..." "hello world..." "11" "21" "5"
 
   echo "Not doing anything..."
 
