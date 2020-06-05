@@ -7,4 +7,3 @@ then
 else
 	mkdir /var/log/vpn-check && protonvpn status >> /var/log/vpn-check/vpn.log 
 fi 
-
