@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if [ -d /var/log/vpn-checker ]; 
+if [ -d /var/log/vpn-check/ ]; 
 then
-do 
-	mkdir /var/log/vpn-checker 
+
+	protonvpn status >> /var/log/vpn-check/vpn.log 
 else
-do
-	protonvpn status >> /var/log/vpn-checker/vpn.log
+	mkdir /var/log/vpn-check && protonvpn status >> /var/log/vpn-check/vpn.log 
+fi 
+
