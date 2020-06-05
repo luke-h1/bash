@@ -7,3 +7,4 @@ do
 else
 do
 	protonvpn status >> /var/log/vpn-checker/vpn.log
+fi 
