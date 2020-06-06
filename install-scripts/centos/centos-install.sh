@@ -1,4 +1,26 @@
 #!/bin/bash
+
+
+function install_ansible() { 
+yum update -y 
+yum install -y epel-release 
+yum install -y ansible 
+} 
+
+
+install_ansible
+
+sudo rpm –-import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+
+
+sudo rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+
+yum list available --disablerepo='*' --enablerepo=elrepo-kernel
+
+sudo yum --enablerepo=elrepo-kernel install kernel-lt
+
+reboot 
+
 function media() { 
 yum install -y blue* 
 yum install -y bluez 
@@ -26,3 +48,10 @@ sudo yum install -y vlc
 } 
 
 media 
+
+
+sudo dnf module reset php -y 
+sudo dnf module install php:remi-7.4 -y
+sudo yum install -y php-* --skip-broken  
+sudo yum install php  php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json
+install_php 
